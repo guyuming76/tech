@@ -1,0 +1,929 @@
+[32;01m * [39;49;00mPackage:    kde-plasma/kwin-5.20.5-r1
+[32;01m * [39;49;00mRepository: gentoo
+[32;01m * [39;49;00mMaintainer: kde@gentoo.org
+[32;01m * [39;49;00mUSE:        abi_x86_64 amd64 elibc_glibc handbook kernel_linux userland_GNU
+[32;01m * [39;49;00mFEATURES:   network-sandbox nostrip preserve-libs sandbox userpriv usersandbox
+>>> Unpacking source...
+>>> Unpacking kwin-5.20.5.tar.xz to /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work
+>>> Source unpacked in /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work
+>>> Preparing source in /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 ...
+ [32;01m*[0m Applying kwin-5.20.5-revert-new-focuschain-w-minimised.patch ...
+[A[228C [34;01m[ [32;01mok[34;01m ][0m
+ [32;01m*[0m Applying kwin-5.20.5-keep-focuschain-behavior-w-minimised.patch ...
+[A[228C [34;01m[ [32;01mok[34;01m ][0m
+ [32;01m*[0m Working in BUILD_DIR: "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build"
+ [32;01m*[0m Applying kwin-5.16.80-gstreamer-optional.patch ...
+[A[228C [34;01m[ [32;01mok[34;01m ][0m
+>>> Source prepared.
+>>> Configuring source in /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 ...
+ [32;01m*[0m Working in BUILD_DIR: "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build"
+cmake -C /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_TESTING=OFF -DCMAKE_DISABLE_FIND_PACKAGE_Qt5Test=ON -DCMAKE_DISABLE_FIND_PACKAGE_KF5DocTools=no -DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DKDE_INSTALL_DOCBUNDLEDIR=/usr/share/help -DCMAKE_DISABLE_FIND_PACKAGE_QAccessibilityClient=ON -DCMAKE_DISABLE_FIND_PACKAGE_Libcap=ON -DCMAKE_BUILD_TYPE=Gentoo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/gentoo_toolchain.cmake  /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5
+loading initial cache file /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/gentoo_common_config.cmake
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-pc-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - found
+-- Performing Test _OFFT_IS_64BIT
+-- Performing Test _OFFT_IS_64BIT - Success
+-- Performing Test HAVE_DATE_TIME
+-- Performing Test HAVE_DATE_TIME - Success
+-- Found KF5Config: /usr/lib64/cmake/KF5Config/KF5ConfigConfig.cmake (found version "5.81.0") 
+-- Found KF5ConfigWidgets: /usr/lib64/cmake/KF5ConfigWidgets/KF5ConfigWidgetsConfig.cmake (found version "5.77.0") 
+-- Found KF5CoreAddons: /usr/lib64/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake (found version "5.81.0") 
+-- Found KF5Crash: /usr/lib64/cmake/KF5Crash/KF5CrashConfig.cmake (found version "5.81.0") 
+-- Found KF5GlobalAccel: /usr/lib64/cmake/KF5GlobalAccel/KF5GlobalAccelConfig.cmake (found version "5.81.0") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.21") 
+-- Found KF5I18n: /usr/lib64/cmake/KF5I18n/KF5I18nConfig.cmake (found version "5.81.0") 
+-- Found KF5IconThemes: /usr/lib64/cmake/KF5IconThemes/KF5IconThemesConfig.cmake (found version "5.77.0") 
+-- Found KF5IdleTime: /usr/lib64/cmake/KF5IdleTime/KF5IdleTimeConfig.cmake (found version "5.81.0") 
+-- Found KF5Notifications: /usr/lib64/cmake/KF5Notifications/KF5NotificationsConfig.cmake (found version "5.77.0") 
+-- Found KF5Package: /usr/lib64/cmake/KF5Package/KF5PackageConfig.cmake (found version "5.81.0") 
+-- Found KF5Plasma: /usr/lib64/cmake/KF5Plasma/KF5PlasmaConfig.cmake (found version "5.77.0") 
+-- Found KF5Wayland: /usr/lib64/cmake/KF5Wayland/KF5WaylandConfig.cmake (found version "5.81.0") 
+-- Found KF5WidgetsAddons: /usr/lib64/cmake/KF5WidgetsAddons/KF5WidgetsAddonsConfig.cmake (found version "5.81.0") 
+-- Found KF5WindowSystem: /usr/lib64/cmake/KF5WindowSystem/KF5WindowSystemConfig.cmake (found version "5.81.0") 
+-- Found KF5: success (found suitable version "5.77.0", minimum required is "5.74") found components: Config ConfigWidgets CoreAddons Crash GlobalAccel I18n IconThemes IdleTime Notifications Package Plasma Wayland WidgetsAddons WindowSystem 
+-- Found KF5Completion: /usr/lib64/cmake/KF5Completion/KF5CompletionConfig.cmake (found version "5.81.0") 
+-- Found KF5Declarative: /usr/lib64/cmake/KF5Declarative/KF5DeclarativeConfig.cmake (found version "5.77.0") 
+-- Found KF5KCMUtils: /usr/lib64/cmake/KF5KCMUtils/KF5KCMUtilsConfig.cmake (found version "5.77.0") 
+-- Found KF5KIO: /usr/lib64/cmake/KF5KIO/KF5KIOConfig.cmake (found version "5.77.0") 
+-- Found KF5NewStuff: /usr/lib64/cmake/KF5NewStuff/KF5NewStuffConfig.cmake (found version "5.77.0") 
+-- Found KF5Service: /usr/lib64/cmake/KF5Service/KF5ServiceConfig.cmake (found version "5.81.0") 
+-- Found KF5TextWidgets: /usr/lib64/cmake/KF5TextWidgets/KF5TextWidgetsConfig.cmake (found version "5.77.0") 
+-- Found KF5XmlGui: /usr/lib64/cmake/KF5XmlGui/KF5XmlGuiConfig.cmake (found version "5.77.0") 
+-- Found KF5: success (found suitable version "5.77.0", minimum required is "5.74") found components: Completion Declarative KCMUtils KIO NewStuff Service TextWidgets XmlGui 
+-- Found PkgConfig: x86_64-pc-linux-gnu-pkg-config (found version "1.7.4") 
+-- Found Wayland_Client: /usr/lib64/libwayland-client.so (found version "1.19.0") 
+-- Found Wayland_Server: /usr/lib64/libwayland-server.so (found version "1.19.0") 
+-- Found Wayland_Cursor: /usr/lib64/libwayland-cursor.so (found version "1.19.0") 
+-- Found Wayland_Egl: /usr/lib64/libwayland-egl.so (found version "18.1.0") 
+-- Found Wayland: /usr/lib64/libwayland-client.so;/usr/lib64/libwayland-server.so;/usr/lib64/libwayland-cursor.so;/usr/lib64/libwayland-egl.so (found suitable version "1.19.0", minimum required is "1.15")  
+-- Performing Test HAVE_EGL
+-- Performing Test HAVE_EGL - Success
+-- Found EGL: /usr/include (found version "1.5") 
+-- Found epoxy: /usr/lib64/libepoxy.so  
+-- Wayland: Egl requires Client
+-- Found Wayland: /usr/lib64/libwayland-client.so;/usr/lib64/libwayland-server.so;/usr/lib64/libwayland-cursor.so;/usr/lib64/libwayland-egl.so (found suitable version "1.19.0", minimum required is "1.2") found components: Egl 
+-- Found XKB: /usr/lib64/libxkbcommon.so (found suitable version "1.2.1", minimum required is "0.7.0") 
+-- Found Libinput: /usr/lib64/libinput.so (found suitable version "1.17.1", minimum required is "1.9") 
+-- Found UDev: /usr/include  
+-- Found Libdrm: /usr/lib64/libdrm.so (found suitable version "2.4.105", minimum required is "2.4.62") 
+-- Found gbm: /usr/lib64/libgbm.so (found version "21.1.0-rc2") 
+CMake Warning (dev) at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (libhardware) does not match the name of the calling package (libhybris).
+  This can lead to problems in calling code that expects `find_package`
+  result variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/modules/Findlibhybris.cmake:46 (find_package_handle_standard_args)
+  CMakeLists.txt:220 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find libhardware (missing: libhardware_LIBRARY libhardware_INCLUDE_DIR) 
+CMake Warning (dev) at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (libhwcomposer) does not match the name of the calling package (libhybris).
+  This can lead to problems in calling code that expects `find_package`
+  result variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/modules/Findlibhybris.cmake:87 (find_package_handle_standard_args)
+  CMakeLists.txt:220 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find libhwcomposer (missing: libhwcomposer_LIBRARY libhwcomposer_INCLUDE_DIR) 
+CMake Warning (dev) at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (hybriseglplatform) does not match the name of the calling package
+  (libhybris).  This can lead to problems in calling code that expects
+  `find_package` result variables (e.g., `_FOUND`) to follow a certain
+  pattern.
+Call Stack (most recent call first):
+  cmake/modules/Findlibhybris.cmake:128 (find_package_handle_standard_args)
+  CMakeLists.txt:220 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find hybriseglplatform (missing: hybriseglplatform_LIBRARY hybriseglplatform_INCLUDE_DIR) 
+-- Found X11: /usr/include   
+-- Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so
+-- Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Found XCB_XCB: /usr/lib64/libxcb.so (found version "1.14") 
+-- Found XCB_RENDER: /usr/lib64/libxcb-render.so (found version "1.14") 
+-- Found XCB_SHAPE: /usr/lib64/libxcb-shape.so (found version "1.14") 
+-- Found XCB_XFIXES: /usr/lib64/libxcb-xfixes.so (found version "1.14") 
+-- Found XCB_SHM: /usr/lib64/libxcb-shm.so (found version "1.14") 
+-- Found XCB_COMPOSITE: /usr/lib64/libxcb-composite.so (found version "1.14") 
+-- Found XCB_CURSOR: /usr/lib64/libxcb-cursor.so (found version "0.1.3") 
+-- Found XCB_DAMAGE: /usr/lib64/libxcb-damage.so (found version "1.14") 
+-- Found XCB_GLX: /usr/lib64/libxcb-glx.so (found version "1.14") 
+-- Found XCB_ICCCM: /usr/lib64/libxcb-icccm.so (found version "0.4.1") 
+-- Found XCB_IMAGE: /usr/lib64/libxcb-image.so (found version "0.4.0") 
+-- Found XCB_KEYSYMS: /usr/lib64/libxcb-keysyms.so (found version "0.4.0") 
+-- Found XCB_RANDR: /usr/lib64/libxcb-randr.so (found version "1.14") 
+-- Found XCB_SYNC: /usr/lib64/libxcb-sync.so (found version "1.14") 
+-- Found XCB: /usr/lib64/libxcb.so;/usr/lib64/libxcb-render.so;/usr/lib64/libxcb-shape.so;/usr/lib64/libxcb-xfixes.so;/usr/lib64/libxcb-shm.so;/usr/lib64/libxcb-composite.so;/usr/lib64/libxcb-cursor.so;/usr/lib64/libxcb-damage.so;/usr/lib64/libxcb-glx.so;/usr/lib64/libxcb-icccm.so;/usr/lib64/libxcb-image.so;/usr/lib64/libxcb-keysyms.so;/usr/lib64/libxcb-randr.so;/usr/lib64/libxcb-sync.so (found suitable version "1.14", minimum required is "1.10") found components: COMPOSITE CURSOR DAMAGE GLX ICCCM IMAGE KEYSYMS RANDR RENDER SHAPE SHM SYNC XCB XFIXES 
+-- Found X11_XCB: /usr/lib64/libX11-xcb.so (found version "1.7.0") 
+-- Found Freetype: /usr/lib64/libfreetype.so (found version "2.10.4") 
+-- Found Fontconfig: /usr/lib64/libfontconfig.so (found version "2.13.1") 
+-- Could NOT find Xwayland (missing: Xwayland_EXECUTABLE) 
+-- Could NOT find hwdata (missing: hwdata_FOUND hwdata_DIR hwdata_PNPIDS_FILE) 
+QtQuick-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.3.
+-- Found QtQuick-QMLModule: TRUE (found version "2.3")  
+QtQuick.Controls-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 1.2.
+-- Found QtQuick.Controls-QMLModule: TRUE (found version "1.2")  
+QtQuick.Layouts-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 1.3.
+-- Found QtQuick.Layouts-QMLModule: TRUE (found version "1.3")  
+QtQuick.VirtualKeyboard-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.1.
+-- Found QtQuick.VirtualKeyboard-QMLModule: TRUE (found version "2.1")  
+QtQuick.Window-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.1.
+-- Found QtQuick.Window-QMLModule: TRUE (found version "2.1")  
+QtMultimedia-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 5.0.
+-- Found QtMultimedia-QMLModule: TRUE (found version "5.0")  
+org.kde.kquickcontrolsaddons-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.0.
+-- Found org.kde.kquickcontrolsaddons-QMLModule: TRUE (found version "2.0")  
+org.kde.plasma.core-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.0.
+-- Found org.kde.plasma.core-QMLModule: TRUE (found version "2.0")  
+org.kde.plasma.components-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.0.
+-- Found org.kde.plasma.components-QMLModule: TRUE (found version "2.0")  
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file malloc.h
+-- Looking for include file malloc.h - found
+-- Looking for sys/prctl.h
+-- Looking for sys/prctl.h - found
+-- Looking for PR_SET_DUMPABLE
+-- Looking for PR_SET_DUMPABLE - found
+-- Looking for PR_SET_PDEATHSIG
+-- Looking for PR_SET_PDEATHSIG - found
+-- Looking for sys/procctl.h
+-- Looking for sys/procctl.h - not found
+-- Looking for PROC_TRACE_CTL
+-- Looking for PROC_TRACE_CTL - not found
+-- Looking for sys/sysmacros.h
+-- Looking for sys/sysmacros.h - found
+-- Looking for linux/vt.h
+-- Looking for linux/vt.h - found
+-- Looking for linux/fb.h
+-- Looking for linux/fb.h - found
+-- Looking for SCHED_RESET_ON_FORK
+-- Looking for SCHED_RESET_ON_FORK - found
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kcm_kwindecoration.
+Call Stack (most recent call first):
+  kcmkwin/kwindecoration/CMakeLists.txt:33 (kpackage_install_package)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kcm_kwinrules.
+Call Stack (most recent call first):
+  kcmkwin/kwinrules/CMakeLists.txt:57 (kpackage_install_package)
+
+
+org.kde.plasma.core-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.0.
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kcm_kwin_virtualdesktops.
+Call Stack (most recent call first):
+  kcmkwin/kwindesktop/CMakeLists.txt:38 (kpackage_install_package)
+
+
+org.kde.plasma.core-QMLModule: qmlplugindump disabled - assuming dependency is available as >= 2.0.
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kcm_kwin_effects.
+Call Stack (most recent call first):
+  kcmkwin/kwineffects/CMakeLists.txt:35 (kpackage_install_package)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_dialogparent.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:160 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_dimscreen.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:161 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_eyeonscreen.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:162 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_fade.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:163 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_fadedesktop.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:164 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_fadingpopups.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:165 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_frozenapp.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:166 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_fullscreen.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:167 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_login.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:168 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_logout.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:169 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_maximize.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:170 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_morphingpopups.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:171 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_scale.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:172 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_squash.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:173 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_translucency.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:174 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_windowaperture.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:175 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for kwin4_effect_sessionquit.
+Call Stack (most recent call first):
+  effects/CMakeLists.txt:155 (kpackage_install_package)
+  effects/CMakeLists.txt:176 (install_scripted_effect)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for videowall.
+Call Stack (most recent call first):
+  scripts/CMakeLists.txt:2 (kpackage_install_package)
+  scripts/CMakeLists.txt:11 (add_kwin_script)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for synchronizeskipswitcher.
+Call Stack (most recent call first):
+  scripts/CMakeLists.txt:2 (kpackage_install_package)
+  scripts/CMakeLists.txt:12 (add_kwin_script)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for desktopchangeosd.
+Call Stack (most recent call first):
+  scripts/CMakeLists.txt:2 (kpackage_install_package)
+  scripts/CMakeLists.txt:13 (add_kwin_script)
+
+
+CMake Warning at /usr/lib64/cmake/KF5Package/KF5PackageMacros.cmake:74 (message):
+  KPackage components should be specified in reverse domain notation.
+  Appstream information won't be generated for minimizeall.
+Call Stack (most recent call first):
+  scripts/CMakeLists.txt:2 (kpackage_install_package)
+  scripts/CMakeLists.txt:14 (add_kwin_script)
+
+
+-- The following features have been enabled:
+
+ * KF5Activities (required version >= 5.74), Enable building of KWin with kactivities support
+   Enable building of KWin with kactivities support
+ * KF5DocTools (required version >= 5.74), Enable building documentation
+   Enable building documentation
+ * Breeze-Decoration, Default decoration plugin Breeze
+ * Wayland::EGL, Enable building of Wayland backend.
+ * XInput, Required for poll-free mouse cursor updates
+ * XCB-ICCCM, Required for building test applications for KWin
+ * prctl/procctl tracing control, Required for disallowing ptrace on kwin_wayland process
+ * linux/vt.h, Required for virtual terminal support under wayland
+ * linux/fb.h, Required for the fbdev backend
+ * SCHED_RESET_ON_FORK, Required for running kwin_wayland with real-time scheduling
+
+-- The following RUNTIME packages have been found:
+
+ * KF5Kirigami2 (required version >= 5.74), A QtQuick based components set
+   Required at runtime for Virtual desktop KCM and the virtual keyboard
+ * EGL, A platform-agnostic mechanism for creating rendering surfaces for use with other graphics libraries, such as OpenGL|ES and OpenVG., <https://www.khronos.org/egl/>
+   Required to build KWin with EGL support
+ * QtQuick-QMLModule, QML module 'QtQuick' is a runtime dependency.
+ * QtQuick.Controls-QMLModule, QML module 'QtQuick.Controls' is a runtime dependency.
+ * QtQuick.Layouts-QMLModule, QML module 'QtQuick.Layouts' is a runtime dependency.
+ * QtQuick.VirtualKeyboard-QMLModule, QML module 'QtQuick.VirtualKeyboard' is a runtime dependency.
+ * QtQuick.Window-QMLModule, QML module 'QtQuick.Window' is a runtime dependency.
+ * QtMultimedia-QMLModule, QML module 'QtMultimedia' is a runtime dependency.
+ * org.kde.kquickcontrolsaddons-QMLModule, QML module 'org.kde.kquickcontrolsaddons' is a runtime dependency.
+ * org.kde.plasma.components-QMLModule, QML module 'org.kde.plasma.components' is a runtime dependency.
+ * org.kde.plasma.core-QMLModule, QML module 'org.kde.plasma.core' is a runtime dependency.
+
+-- The following OPTIONAL packages have been found:
+
+ * KF5ItemViews (required version >= 5.77.0)
+ * KF5JobWidgets (required version >= 5.77.0)
+ * KF5Solid (required version >= 5.77.0)
+ * KF5Attica (required version >= 5.77.0)
+ * KF5NewStuffCore (required version >= 5.77.0)
+ * KF5Sonnet (required version >= 5.77.0)
+ * KF5Auth (required version >= 5.77.0)
+ * KF5Codecs (required version >= 5.77.0)
+ * KF5Activities (required version >= 5.74), Enable building of KWin with kactivities support
+   Enable building of KWin with kactivities support
+ * KF5DocTools (required version >= 5.74), Enable building documentation
+   Enable building documentation
+ * Breeze (required version >= 5.9.0)
+   For setting the default window decoration plugin
+ * Libdrm (required version >= 2.4.62), Userspace interface to kernel DRM services., <https://wiki.freedesktop.org/dri/>
+   Required for drm output on Wayland.
+ * gbm, Mesa gbm library., <https://www.mesa3d.org>
+   Required for egl output of drm backend.
+ * X11_XCB, A compatibility library for code that translates Xlib API calls into XCB calls, <https://xorg.freedesktop.org/>
+   Required for building X11 windowed backend of kwin_wayland
+ * PkgConfig
+
+-- The following REQUIRED packages have been found:
+
+ * Qt5Qml (required version >= 5.15.2)
+ * Qt5QmlModels (required version >= 5.15.2)
+ * Qt5QuickWidgets
+ * Qt5Script
+ * Qt5Sensors
+ * Qt5UiTools
+ * Qt5 (required version >= 5.15.0)
+ * KF5Crash (required version >= 5.74)
+ * KF5GlobalAccel (required version >= 5.74)
+ * KF5IconThemes (required version >= 5.74)
+ * KF5IdleTime (required version >= 5.74)
+ * KF5Notifications (required version >= 5.74)
+ * KF5Plasma (required version >= 5.74)
+ * Qt5Quick (required version >= 5.13.0)
+ * ECM (required version >= 1.6.0)
+ * KF5Package (required version >= 5.77.0)
+ * KF5Declarative (required version >= 5.74)
+ * KF5KCMUtils (required version >= 5.74)
+ * KF5Completion (required version >= 5.77.0)
+ * KF5WindowSystem (required version >= 5.77.0)
+ * Qt5Concurrent (required version >= 5.13.0)
+ * KF5KIO (required version >= 5.74)
+ * Qt5Network (required version >= 5.14.0)
+ * KF5NewStuff (required version >= 5.74)
+ * KF5Service (required version >= 5.74)
+ * Gettext
+ * KF5I18n (required version >= 5.77.0)
+ * KF5TextWidgets (required version >= 5.74)
+ * KF5CoreAddons (required version >= 5.77.0)
+ * Qt5DBus (required version >= 5.14.0)
+ * KF5Config (required version >= 5.77.0)
+ * Qt5Widgets (required version >= 5.14.0)
+ * KF5WidgetsAddons (required version >= 5.77.0)
+ * KF5ConfigWidgets (required version >= 5.77.0)
+ * KF5XmlGui (required version >= 5.74)
+ * KF5 (required version >= 5.74)
+ * KDecoration2 (required version >= 5.18.0)
+ * Qt5Core (required version >= 5.15.0)
+ * Qt5X11Extras (required version >= 5.15.0)
+ * KScreenLocker
+   For screenlocker integration in kwin_wayland
+ * Qt5Gui (required version >= 5.14.0)
+ * KF5Wayland (required version >= 5.78)
+ * KWaylandServer
+   For Wayland integration
+ * epoxy, libepoxy, <https://github.com/anholt/libepoxy>
+   OpenGL dispatch library
+ * Wayland (required version >= 1.2), C library implementation of the Wayland protocol: a protocol for a compositor to talk to its clients, <https://wayland.freedesktop.org/>
+   Required for building KWin with Wayland support
+ * XKB (required version >= 0.7.0), XKB API common to servers and clients., <https://xkbcommon.org>
+   Required for building KWin with Wayland support
+ * Libinput (required version >= 1.9), Library to handle input devices in Wayland compositors and to provide a generic X.Org input driver., <https://www.freedesktop.org/wiki/Software/libinput/>
+   Required for input handling on Wayland.
+ * UDev, Linux device library., <https://www.freedesktop.org/wiki/Software/systemd/>
+   Required for input handling on Wayland.
+ * X11, X11 libraries, <https://www.x.org>
+ * XCB (required version >= 1.10), X protocol C-language Binding, <https://xcb.freedesktop.org/>
+ * Qt5FontDatabaseSupport
+ * Qt5ThemeSupport
+ * Threads
+   Needed for VirtualTerminal support in KWin Wayland
+ * Qt5EventDispatcherSupport
+ * Freetype, A font rendering engine, <https://www.freetype.org>
+   Needed for KWin's QPA plugin.
+ * Fontconfig, Fontconfig is a library for configuring and customizing font access, <https://www.fontconfig.org/>
+   Needed for KWin's QPA plugin.
+
+-- The following features have been disabled:
+
+ * Qt5Test, Required for building tests
+   Required for tests
+ * PipeWire, Required for Wayland screencasting
+
+-- The following RUNTIME packages have not been found:
+
+ * Qt5Multimedia
+   Runtime-only dependency for effect video playback
+ * Xwayland, Xwayland X server, <https://x.org>
+   Needed for running kwin_wayland
+ * hwdata, <https://github.com/vcrhonek/hwdata>
+   Runtime-only dependency needed for mapping monitor hardware vendor IDs to full names
+
+-- The following OPTIONAL packages have not been found:
+
+ * libhybris, libhybris allows to run bionic-based HW adaptations in glibc systems., <https://github.com/libhybris/libhybris>
+   Required for libhybris backend
+
+-- <<< Gentoo configuration >>>
+Build type      Gentoo
+Install path    /usr
+Compiler flags:
+C               -O2 -pipe -fno-common -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wmissing-format-attribute -Wwrite-strings -Werror=implicit-function-declaration
+C++             -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always
+Linker flags:
+Executable      -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed
+Module          -Wl,--no-undefined -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed
+Shared          -Wl,--no-undefined -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build
+>>> Source configured.
+>>> Compiling source in /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 ...
+ [32;01m*[0m Working in BUILD_DIR: "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build"
+ninja -v -j4 -l0
+[1/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/kwineffects/index.cache.bz2 po/uk/docs/kcontrol/kwineffects/index.docbook
+[2/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/uk/docs/kcontrol/kwinscreenedges/index.docbook
+[3/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/kwintabbox/index.cache.bz2 po/uk/docs/kcontrol/kwintabbox/index.docbook
+[4/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/windowspecific/index.cache.bz2 po/uk/docs/kcontrol/windowspecific/index.docbook
+[5/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/kwindecoration/index.cache.bz2 po/uk/docs/kcontrol/kwindecoration/index.docbook
+[6/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/desktop/index.cache.bz2 po/uk/docs/kcontrol/desktop/index.docbook
+[7/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ru/docs/kcontrol/windowbehaviour/index.cache.bz2 po/ru/docs/kcontrol/windowbehaviour/index.docbook
+[8/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ru/docs/kcontrol/kwintabbox/index.cache.bz2 po/ru/docs/kcontrol/kwintabbox/index.docbook
+[9/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ru/docs/kcontrol/kwineffects/index.cache.bz2 po/ru/docs/kcontrol/kwineffects/index.docbook
+[10/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ru/docs/kcontrol/kwindecoration/index.cache.bz2 po/ru/docs/kcontrol/kwindecoration/index.docbook
+[11/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ru/docs/kcontrol/desktop/index.cache.bz2 po/ru/docs/kcontrol/desktop/index.docbook
+[12/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/sr/docs/kcontrol/desktop/index.cache.bz2 po/sr/docs/kcontrol/desktop/index.docbook
+[13/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt_BR/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/pt_BR/docs/kcontrol/kwinscreenedges/index.docbook
+I/O warning : failed to load external entity "/usr/share/kf5/kdoctools/customization/xsl/pt-BR.xml"
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+[14/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt_BR/docs/kcontrol/kwintabbox/index.cache.bz2 po/pt_BR/docs/kcontrol/kwintabbox/index.docbook
+I/O warning : failed to load external entity "/usr/share/kf5/kdoctools/customization/xsl/pt-BR.xml"
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+[15/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/fr/docs/kcontrol/windowspecific/index.cache.bz2 po/fr/docs/kcontrol/windowspecific/index.docbook
+[16/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/es/docs/kcontrol/desktop/index.cache.bz2 po/es/docs/kcontrol/desktop/index.docbook
+[17/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/fr/docs/kcontrol/kwintabbox/index.cache.bz2 po/fr/docs/kcontrol/kwintabbox/index.docbook
+[18/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/windowspecific/index.cache.bz2 po/id/docs/kcontrol/windowspecific/index.docbook
+[19/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt_BR/docs/kcontrol/kwindecoration/index.cache.bz2 po/pt_BR/docs/kcontrol/kwindecoration/index.docbook
+I/O warning : failed to load external entity "/usr/share/kf5/kdoctools/customization/xsl/pt-BR.xml"
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+[20/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ru/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/ru/docs/kcontrol/kwinscreenedges/index.docbook
+[21/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/windowbehaviour/index.cache.bz2 po/de/docs/kcontrol/windowbehaviour/index.docbook
+[22/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/pt/docs/kcontrol/kwinscreenedges/index.docbook
+[23/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/windowspecific/index.cache.bz2 po/de/docs/kcontrol/windowspecific/index.docbook
+[24/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/kwineffects/index.cache.bz2 po/de/docs/kcontrol/kwineffects/index.docbook
+[25/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/ca/docs/kcontrol/kwinscreenedges/index.docbook
+[26/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/it/docs/kcontrol/kwinscreenedges/index.docbook
+[27/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/windowbehaviour/index.cache.bz2 po/ca/docs/kcontrol/windowbehaviour/index.docbook
+[28/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/desktop/index.cache.bz2 po/ca/docs/kcontrol/desktop/index.docbook
+[29/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/fr/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/fr/docs/kcontrol/kwinscreenedges/index.docbook
+[30/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build && /usr/bin/cmake -DPYTHON_EXECUTABLE=/usr/bin/python -D_ki18n_pmap_compile_script=/usr/lib64/cmake/KF5I18n/ts-pmap-compile.py -DCOPY_TO=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/locale -DPO_DIR=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/po -P /usr/lib64/cmake/KF5I18n/build-tsfiles.cmake
+[31/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/KWinEffectsInterface_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/KWinEffectsInterface_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/KWinEffectsInterface_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/b569c8f091bf82613df5dea4d55676c2efedaebebb9d11a2f473de1592eb778c.d
+[32/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/windowbehaviour/index.cache.bz2 po/id/docs/kcontrol/windowbehaviour/index.docbook
+[33/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt_BR/docs/kcontrol/windowbehaviour/index.cache.bz2 po/pt_BR/docs/kcontrol/windowbehaviour/index.docbook
+I/O warning : failed to load external entity "/usr/share/kf5/kdoctools/customization/xsl/pt-BR.xml"
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+[34/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/kwineffects/index.cache.bz2 po/id/docs/kcontrol/kwineffects/index.docbook
+[35/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt_BR/docs/kcontrol/desktop/index.cache.bz2 po/pt_BR/docs/kcontrol/desktop/index.docbook
+I/O warning : failed to load external entity "/usr/share/kf5/kdoctools/customization/xsl/pt-BR.xml"
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+[36/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/kwintabbox/index.cache.bz2 po/ca/docs/kcontrol/kwintabbox/index.docbook
+[37/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/kwineffects/index.cache.bz2 po/ca/docs/kcontrol/kwineffects/index.docbook
+[38/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/de/docs/kcontrol/kwinscreenedges/index.docbook
+[39/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/windowbehaviour/index.cache.bz2 po/it/docs/kcontrol/windowbehaviour/index.docbook
+[40/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/desktop/index.cache.bz2 po/de/docs/kcontrol/desktop/index.docbook
+[41/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt_BR/docs/kcontrol/windowspecific/index.cache.bz2 po/pt_BR/docs/kcontrol/windowspecific/index.docbook
+I/O warning : failed to load external entity "/usr/share/kf5/kdoctools/customization/xsl/pt-BR.xml"
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+No "pt_br" localization of "footer-doc-comment" exists; using "en".
+No "pt_br" localization of "footer-doc-feedback" exists; using "en".
+No "pt_br" localization of "footer-doc-teamname" exists; using "en".
+[42/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/kwintabbox/index.cache.bz2 po/pt/docs/kcontrol/kwintabbox/index.docbook
+[43/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/kwindecoration/index.cache.bz2 po/ca/docs/kcontrol/kwindecoration/index.docbook
+[44/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/uk/docs/kcontrol/windowbehaviour/index.cache.bz2 po/uk/docs/kcontrol/windowbehaviour/index.docbook
+[45/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/windowspecific/index.cache.bz2 po/pt/docs/kcontrol/windowspecific/index.docbook
+[46/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/desktop/index.cache.bz2 po/id/docs/kcontrol/desktop/index.docbook
+[47/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/kwindecoration/index.cache.bz2 po/id/docs/kcontrol/kwindecoration/index.docbook
+[48/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/windowbehaviour/index.cache.bz2 po/pt/docs/kcontrol/windowbehaviour/index.docbook
+[49/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/kwintabbox/index.cache.bz2 po/id/docs/kcontrol/kwintabbox/index.docbook
+[50/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/windowbehaviour/index.cache.bz2 po/nl/docs/kcontrol/windowbehaviour/index.docbook
+[51/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/ca/docs/kcontrol/windowspecific/index.cache.bz2 po/ca/docs/kcontrol/windowspecific/index.docbook
+[52/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/desktop/index.cache.bz2 po/it/docs/kcontrol/desktop/index.docbook
+[53/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/kwindecoration/index.cache.bz2 po/it/docs/kcontrol/kwindecoration/index.docbook
+[54/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/sr@latin/docs/kcontrol/desktop/index.cache.bz2 po/sr@latin/docs/kcontrol/desktop/index.docbook
+[55/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/kwineffects/index.cache.bz2 po/it/docs/kcontrol/kwineffects/index.docbook
+[56/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/fr/docs/kcontrol/desktop/index.cache.bz2 po/fr/docs/kcontrol/desktop/index.docbook
+[57/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/kwintabbox/index.cache.bz2 po/de/docs/kcontrol/kwintabbox/index.docbook
+[58/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/kwindecoration/index.cache.bz2 po/pt/docs/kcontrol/kwindecoration/index.docbook
+[59/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/kwintabbox/index.cache.bz2 po/it/docs/kcontrol/kwintabbox/index.docbook
+[60/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/desktop/index.cache.bz2 po/nl/docs/kcontrol/desktop/index.docbook
+[61/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/it/docs/kcontrol/windowspecific/index.cache.bz2 po/it/docs/kcontrol/windowspecific/index.docbook
+[62/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/kwindecoration/index.cache.bz2 po/nl/docs/kcontrol/kwindecoration/index.docbook
+[63/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/kwineffects/index.cache.bz2 po/nl/docs/kcontrol/kwineffects/index.docbook
+[64/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/nl/docs/kcontrol/kwinscreenedges/index.docbook
+[65/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/kwintabbox/index.cache.bz2 po/nl/docs/kcontrol/kwintabbox/index.docbook
+[66/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/nl/docs/kcontrol/windowspecific/index.cache.bz2 po/nl/docs/kcontrol/windowspecific/index.docbook
+[67/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/de/docs/kcontrol/kwindecoration/index.cache.bz2 po/de/docs/kcontrol/kwindecoration/index.docbook
+[68/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/desktop/index.cache.bz2 po/pt/docs/kcontrol/desktop/index.docbook
+[69/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build && /usr/lib64/qt5/bin/qdbusxml2cpp -m -p kwineffects_interface /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/org.kde.kwin.Effects.xml
+[70/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build && /usr/lib64/qt5/bin/moc @/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kwineffects_interface.moc_parameters
+[71/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/id/docs/kcontrol/kwinscreenedges/index.cache.bz2 po/id/docs/kcontrol/kwinscreenedges/index.docbook
+[72/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 -IKWinEffectsInterface_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects -I/usr/include/qt5/QtGui/5.15.2 -I/usr/include/qt5/QtGui/5.15.2/QtGui -I/usr/include/qt5/QtCore/5.15.2 -I/usr/include/qt5/QtCore/5.15.2/QtCore -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT CMakeFiles/KWinEffectsInterface.dir/KWinEffectsInterface_autogen/mocs_compilation.cpp.o -MF CMakeFiles/KWinEffectsInterface.dir/KWinEffectsInterface_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/KWinEffectsInterface.dir/KWinEffectsInterface_autogen/mocs_compilation.cpp.o -c KWinEffectsInterface_autogen/mocs_compilation.cpp
+[73/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 && /usr/bin/meinproc5 --check --cache /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/po/pt/docs/kcontrol/kwineffects/index.cache.bz2 po/pt/docs/kcontrol/kwineffects/index.docbook
+[74/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/CMakeFiles/kwinxrenderutils_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/kwinxrenderutils_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/kwinxrenderutils_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/b95692d2a6b6bbb7291813321aa6932e1c76382c1582a1d81af48ab89b6b07fa.d
+[75/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinxrenderutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinxrenderutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils_autogen/mocs_compilation.cpp.o -MF libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils_autogen/mocs_compilation.cpp.o.d -o libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils_autogen/mocs_compilation.cpp.o -c libkwineffects/kwinxrenderutils_autogen/mocs_compilation.cpp
+[76/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/CMakeFiles/kwinglutils_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/kwinglutils_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/kwinglutils_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/12f19b01808e00b12f5b4c525ddfb46733da38fcc2075ab527cdc67b5094529b.d
+[77/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build && /usr/bin/cmake -DGETTEXT_MSGFMT_EXECUTABLE=/usr/bin/msgfmt -DCOPY_TO=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/locale -DPO_DIR=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/po -P /usr/lib64/cmake/KF5I18n/build-pofiles.cmake
+[78/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_autogen/mocs_compilation.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_autogen/mocs_compilation.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_autogen/mocs_compilation.cpp.o -c libkwineffects/kwinglutils_autogen/mocs_compilation.cpp
+[79/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinxrenderutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinxrenderutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinxrenderutils.dir/logging.cpp.o -MF libkwineffects/CMakeFiles/kwinxrenderutils.dir/logging.cpp.o.d -o libkwineffects/CMakeFiles/kwinxrenderutils.dir/logging.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/logging.cpp
+[80/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinxrenderutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinxrenderutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils.cpp.o -MF libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils.cpp.o.d -o libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwinxrenderutils.cpp
+[81/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 -IKWinEffectsInterface_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects -I/usr/include/qt5/QtGui/5.15.2 -I/usr/include/qt5/QtGui/5.15.2/QtGui -I/usr/include/qt5/QtCore/5.15.2 -I/usr/include/qt5/QtCore/5.15.2/QtCore -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT CMakeFiles/KWinEffectsInterface.dir/kwineffects_interface.cpp.o -MF CMakeFiles/KWinEffectsInterface.dir/kwineffects_interface.cpp.o.d -o CMakeFiles/KWinEffectsInterface.dir/kwineffects_interface.cpp.o -c kwineffects_interface.cpp
+[82/974] : && /usr/bin/cmake -E rm -f lib/libKWinEffectsInterface.a && /usr/bin/x86_64-pc-linux-gnu-ar qc lib/libKWinEffectsInterface.a  CMakeFiles/KWinEffectsInterface.dir/KWinEffectsInterface_autogen/mocs_compilation.cpp.o CMakeFiles/KWinEffectsInterface.dir/kwineffects_interface.cpp.o && /usr/bin/x86_64-pc-linux-gnu-ranlib lib/libKWinEffectsInterface.a && :
+[83/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/kwingltexture.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/kwingltexture.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/kwingltexture.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwingltexture.cpp
+[84/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/kwinglplatform.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/kwinglplatform.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglplatform.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwinglplatform.cpp
+[85/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_funcs.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_funcs.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_funcs.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwinglutils_funcs.cpp
+[86/974] : && /usr/bin/x86_64-pc-linux-gnu-g++ -fPIC -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always  -Wl,--no-undefined -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed -shared -Wl,-soname,libkwinxrenderutils.so.12 -o bin/libkwinxrenderutils.so.5.20.5 libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils_autogen/mocs_compilation.cpp.o libkwineffects/CMakeFiles/kwinxrenderutils.dir/kwinxrenderutils.cpp.o libkwineffects/CMakeFiles/kwinxrenderutils.dir/logging.cpp.o  /usr/lib64/libKWaylandServer.so.5.21.4  /usr/lib64/libxcb-render.so  /usr/lib64/libxcb.so  /usr/lib64/libxcb-xfixes.so  /usr/lib64/libQt5Gui.so.5.15.2  /usr/lib64/libwayland-server.so  /usr/lib64/libQt5Core.so.5.15.2  /usr/lib64/libxcb-render.so  /usr/lib64/libxcb-shape.so  /usr/lib64/libxcb.so && :
+[87/974] /usr/bin/cmake -E cmake_symlink_library bin/libkwinxrenderutils.so.5.20.5  bin/libkwinxrenderutils.so.12 bin/libkwinxrenderutils.so && :
+[88/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects && /usr/bin/desktoptojson -i /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects/login/package/metadata.desktop -o /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects/kwin4_effect_login-effects-metadata.json
+About to parse service type file "/usr/share/kservicetypes5/kwineffect.desktop"
+Found property definition "X-KDE-Ordering" with type "int"
+Found property definition "X-KWin-Requires-OpenGL" with type "bool"
+Found property definition "X-KWin-Requires-OpenGL2" with type "bool"
+Found property definition "X-KWin-Requires-Shaders" with type "bool"
+Found property definition "X-KWin-Video-Url" with type "QString"
+Found property definition "X-KWin-Exclusive-Category" with type "QString"
+Found property definition "X-KWin-Internal" with type "bool"
+About to parse service type file "/usr/share/kservicetypes5/kcmodule.desktop"
+Found property definition "X-KDE-FactoryName" with type "QString"
+Found property definition "X-KDE-ParentComponents" with type "QStringList"
+Found property definition "X-KDE-CfgDlgHierarchy" with type "QString"
+Found property definition "X-KDE-System-Settings-Parent-Category" with type "QString"
+Found property definition "X-KDE-KInfoCenter-Category" with type "QString"
+Found property definition "X-KDE-Weight" with type "int"
+Found property definition "X-KDE-PluginKeyword" with type "QString"
+Found property definition "X-KDE-OnlyShowOnQtPlatforms" with type "QStringList"
+Found property definition "X-KDE-KCM-Args" with type "QStringList"
+Unknown property type for key "X-Plasma-API" -> falling back to string
+Unknown property type for key "X-Plasma-MainScript" -> falling back to string
+Unknown property type for key "X-KWin-Config-TranslationDomain" -> falling back to string
+Generated  "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects/kwin4_effect_login-effects-metadata.json"
+[89/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects && /usr/bin/desktoptojson -i /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects/sessionquit/package/metadata.desktop -o /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects/kwin4_effect_sessionquit-effects-metadata.json
+About to parse service type file "/usr/share/kservicetypes5/kwineffect.desktop"
+Found property definition "X-KDE-Ordering" with type "int"
+Found property definition "X-KWin-Requires-OpenGL" with type "bool"
+Found property definition "X-KWin-Requires-OpenGL2" with type "bool"
+Found property definition "X-KWin-Requires-Shaders" with type "bool"
+Found property definition "X-KWin-Video-Url" with type "QString"
+Found property definition "X-KWin-Exclusive-Category" with type "QString"
+Found property definition "X-KWin-Internal" with type "bool"
+Unknown property type for key "X-Plasma-API" -> falling back to string
+Unknown property type for key "X-Plasma-MainScript" -> falling back to string
+Generated  "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects/kwin4_effect_sessionquit-effects-metadata.json"
+[90/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects && /usr/bin/desktoptojson -i /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects/logout/package/metadata.desktop -o /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects/kwin4_effect_logout-effects-metadata.json
+About to parse service type file "/usr/share/kservicetypes5/kwineffect.desktop"
+Found property definition "X-KDE-Ordering" with type "int"
+Found property definition "X-KWin-Requires-OpenGL" with type "bool"
+Found property definition "X-KWin-Requires-OpenGL2" with type "bool"
+Found property definition "X-KWin-Requires-Shaders" with type "bool"
+Found property definition "X-KWin-Video-Url" with type "QString"
+Found property definition "X-KWin-Exclusive-Category" with type "QString"
+Found property definition "X-KWin-Internal" with type "bool"
+Unknown property type for key "X-Plasma-API" -> falling back to string
+Unknown property type for key "X-Plasma-MainScript" -> falling back to string
+Generated  "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/effects/kwin4_effect_logout-effects-metadata.json"
+[91/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/kwineglimagetexture.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/kwineglimagetexture.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/kwineglimagetexture.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwineglimagetexture.cpp
+[92/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration && /usr/bin/desktoptojson -i /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/package/metadata.desktop -o /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kcm_kwindecoration-kcms-metadata.json
+About to parse service type file "/usr/share/kservicetypes5/plasma-generic.desktop"
+Unknown property type for key "Keywords" -> falling back to string
+Unknown property type for key "X-KDE-ParentApp" -> falling back to string
+Unknown property type for key "X-KDE-System-Settings-Parent-Category" -> falling back to string
+Unknown property type for key "X-Plasma-API" -> falling back to string
+Unknown property type for key "X-Plasma-MainScript" -> falling back to string
+Generated  "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kcm_kwindecoration-kcms-metadata.json"
+[93/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration && /usr/bin/desktoptojson -i kwindecoration.desktop -o /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kwindecoration.json -s /usr/share/kservicetypes5/kcmodule.desktop
+About to parse service type file "/usr/share/kservicetypes5/kcmodule.desktop"
+Found property definition "X-KDE-FactoryName" with type "QString"
+Found property definition "X-KDE-ParentComponents" with type "QStringList"
+Found property definition "X-KDE-CfgDlgHierarchy" with type "QString"
+Found property definition "X-KDE-System-Settings-Parent-Category" with type "QString"
+Found property definition "X-KDE-KInfoCenter-Category" with type "QString"
+Found property definition "X-KDE-Weight" with type "int"
+Found property definition "X-KDE-PluginKeyword" with type "QString"
+Found property definition "X-KDE-OnlyShowOnQtPlatforms" with type "QStringList"
+Found property definition "X-KDE-KCM-Args" with type "QStringList"
+Unknown property type for key "Categories" -> falling back to string
+Unknown property type for key "X-KDE-ParentApp" -> falling back to string
+Unknown property type for key "X-DocPath" -> falling back to string
+Unknown property type for key "X-KDE-Keywords" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[az]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[bs]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ca]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ca@valencia]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[cs]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[da]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[de]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[el]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[en_GB]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[es]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[et]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[eu]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[fi]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[fr]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ga]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[gl]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[hu]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ia]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[id]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[it]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[kk]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[km]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ko]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[lt]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[nb]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[nds]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[nl]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[nn]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[pl]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[pt]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[pt_BR]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ro]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[ru]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sk]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sl]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sr]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sr@ijekavian]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sr@ijekavianlatin]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sr@latin]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[sv]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[tr]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[uk]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[x-test]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[zh_CN]" -> falling back to string
+Unknown property type for key "X-KDE-Keywords[zh_TW]" -> falling back to string
+Generated  "/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kwindecoration.json"
+[94/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/logging.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/logging.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/logging.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/logging.cpp
+[95/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/CMakeFiles/kwincompositing_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/kwincompositing_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/kwincompositing_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/fd529f03467133236684d8c570131ce486966d4caf988901e76595e3f9ef86bf.d
+[96/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing && /usr/lib64/libexec/kf5/kconfig_compiler_kf5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing/kwincompositing_setting.kcfg /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing/kwincompositing_setting.kcfgc -d /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/
+[97/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing && /usr/lib64/qt5/bin/moc @/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/kwincompositing_setting.moc_parameters
+/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/kwincompositing_setting.h:0: Note: No relevant classes found. No output generated.
+[98/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing && /usr/lib64/qt5/bin/qdbusxml2cpp -m -p kwin_compositing_interface /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/org.kde.kwin.Compositing.xml
+[99/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing && /usr/lib64/qt5/bin/moc @/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/kwin_compositing_interface.moc_parameters
+[100/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing && /usr/bin/cmake -DKDE_UIC_EXECUTABLE:FILEPATH=/usr/lib64/qt5/bin/uic -DKDE_UIC_FILE:FILEPATH=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing/compositing.ui -DKDE_UIC_H_FILE:FILEPATH=/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwincompositing/ui_compositing.h -DKDE_UIC_BASENAME:STRING=compositing -P /usr/lib64/cmake/KF5I18n/kf5i18nuic.cmake
+[101/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcmkwincompositing\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwincompositing_EXPORTS -Ikcmkwin/kwincompositing -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing -Ikcmkwin/kwincompositing/kwincompositing_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KCMUtils -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_autogen/mocs_compilation.cpp.o -MF kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_autogen/mocs_compilation.cpp.o.d -o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_autogen/mocs_compilation.cpp.o -c kcmkwin/kwincompositing/kwincompositing_autogen/mocs_compilation.cpp
+[102/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwinglutils_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwinglutils_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtWidgets  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils.cpp.o -MF libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils.cpp.o.d -o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwinglutils.cpp
+[103/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kcm_kwindecoration_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kcm_kwindecoration_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/a95536e24a3d4c5373198178a653e4b9f14226b4457ec2077a454127b53770bf.d
+[104/974] : && /usr/bin/x86_64-pc-linux-gnu-g++ -fPIC -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always  -Wl,--no-undefined -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed -shared -Wl,-soname,libkwinglutils.so.12 -o bin/libkwinglutils.so.5.20.5 libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_autogen/mocs_compilation.cpp.o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglplatform.cpp.o libkwineffects/CMakeFiles/kwinglutils.dir/kwingltexture.cpp.o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils.cpp.o libkwineffects/CMakeFiles/kwinglutils.dir/kwinglutils_funcs.cpp.o libkwineffects/CMakeFiles/kwinglutils.dir/kwineglimagetexture.cpp.o libkwineffects/CMakeFiles/kwinglutils.dir/logging.cpp.o  /usr/lib64/libxcb.so  /usr/lib64/libKF5CoreAddons.so.5.81.0  /usr/lib64/libKF5ConfigCore.so.5.81.0  /usr/lib64/libKF5WindowSystem.so.5.81.0  -lepoxy  -lepoxy  /usr/lib64/libQt5Widgets.so.5.15.2  /usr/lib64/libQt5Gui.so.5.15.2  /usr/lib64/libQt5Core.so.5.15.2 && :
+[105/974] /usr/bin/cmake -E cmake_symlink_library bin/libkwinglutils.so.5.20.5  bin/libkwinglutils.so.12 bin/libkwinglutils.so && :
+[106/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/declarative-plugin && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/declarative-plugin /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/3fff6424af60e1de088529addf13ffdc4097b8fe61c9904f79411d4728aded5c.d
+[107/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects && /usr/bin/cmake -E cmake_autogen /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/CMakeFiles/kwineffects_autogen.dir/AutogenInfo.json Gentoo && /usr/bin/cmake -E touch /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/kwineffects_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/libkwineffects/kwineffects_autogen/deps /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/CMakeFiles/d/114cfab3fd911d99ff7bb1a17cb3a95987f20302e2950e6f9734710775f7a586.d
+[108/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcmkwincompositing\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwincompositing_EXPORTS -Ikcmkwin/kwincompositing -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing -Ikcmkwin/kwincompositing/kwincompositing_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KCMUtils -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_setting.cpp.o -MF kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_setting.cpp.o.d -o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_setting.cpp.o -c kcmkwin/kwincompositing/kwincompositing_setting.cpp
+[109/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcmkwincompositing\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwincompositing_EXPORTS -Ikcmkwin/kwincompositing -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing -Ikcmkwin/kwincompositing/kwincompositing_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KCMUtils -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwin_compositing_interface.cpp.o -MF kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwin_compositing_interface.cpp.o.d -o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwin_compositing_interface.cpp.o -c kcmkwin/kwincompositing/kwin_compositing_interface.cpp
+[110/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcmkwincompositing\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwincompositing_EXPORTS -Ikcmkwin/kwincompositing -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing -Ikcmkwin/kwincompositing/kwincompositing_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KCMUtils -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/main.cpp.o -MF kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/main.cpp.o.d -o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/main.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwincompositing/main.cpp
+[111/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwineffects_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwineffects_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/KF5/KPackage  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwineffects.dir/kwineffects_autogen/mocs_compilation.cpp.o -MF libkwineffects/CMakeFiles/kwineffects.dir/kwineffects_autogen/mocs_compilation.cpp.o.d -o libkwineffects/CMakeFiles/kwineffects.dir/kwineffects_autogen/mocs_compilation.cpp.o -c libkwineffects/kwineffects_autogen/mocs_compilation.cpp
+[112/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwineffects_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwineffects_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/KF5/KPackage  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwineffects.dir/anidata.cpp.o -MF libkwineffects/CMakeFiles/kwineffects.dir/anidata.cpp.o.d -o libkwineffects/CMakeFiles/kwineffects.dir/anidata.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/anidata.cpp
+[113/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwineffects_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwineffects_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/KF5/KPackage  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwineffects.dir/logging.cpp.o -MF libkwineffects/CMakeFiles/kwineffects.dir/logging.cpp.o.d -o libkwineffects/CMakeFiles/kwineffects.dir/logging.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/logging.cpp
+[114/974] : && /usr/bin/x86_64-pc-linux-gnu-g++ -fPIC -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always  -Wl,--no-undefined -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed -shared  -o bin/kwincompositing.so kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_autogen/mocs_compilation.cpp.o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/main.cpp.o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwincompositing_setting.cpp.o kcmkwin/kwincompositing/CMakeFiles/kwincompositing.dir/kwin_compositing_interface.cpp.o  /usr/lib64/libKF5KCMUtils.so.5.77.0  /usr/lib64/libKF5ConfigWidgets.so.5.77.0  /usr/lib64/libKF5Codecs.so.5.81.0  /usr/lib64/libKF5Auth.so.5.77.0  /usr/lib64/libKF5Service.so.5.81.0  /usr/lib64/libKF5AuthCore.so.5.77.0  /usr/lib64/libKF5WidgetsAddons.so.5.81.0  /usr/lib64/libKF5ConfigGui.so.5.81.0  /usr/lib64/libKF5ConfigCore.so.5.81.0  /usr/lib64/libQt5Xml.so.5.15.2  /usr/lib64/libQt5Widgets.so.5.15.2  /usr/lib64/libQt5Gui.so.5.15.2  /usr/lib64/libQt5DBus.so.5.15.2  /usr/lib64/libKF5CoreAddons.so.5.81.0  /usr/lib64/libKF5I18n.so.5.81.0  /usr/lib64/libQt5Core.so.5.15.2 && :
+[115/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration && /usr/lib64/libexec/kf5/kconfig_compiler_kf5 /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/kwindecorationsettings.kcfg /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/kwindecorationsettings.kcfgc -d /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/
+[116/974] cd /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration && /usr/lib64/qt5/bin/moc @/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/kcmkwin/kwindecoration/kwindecorationsettings.moc_parameters
+[117/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwineffects_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwineffects_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/KF5/KPackage  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwineffects.dir/kwineffectquickview.cpp.o -MF libkwineffects/CMakeFiles/kwineffects.dir/kwineffectquickview.cpp.o.d -o libkwineffects/CMakeFiles/kwineffects.dir/kwineffectquickview.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwineffectquickview.cpp
+[118/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwineffects_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwineffects_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/KF5/KPackage  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwineffects.dir/kwinanimationeffect.cpp.o -MF libkwineffects/CMakeFiles/kwineffects.dir/kwinanimationeffect.cpp.o.d -o libkwineffects/CMakeFiles/kwineffects.dir/kwinanimationeffect.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwinanimationeffect.cpp
+[119/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkwineffects_EXPORTS -Ilibkwineffects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -Ilibkwineffects/kwineffects_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I. -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5 -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KWindowSystem -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/KF5/KPackage  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT libkwineffects/CMakeFiles/kwineffects.dir/kwineffects.cpp.o -MF libkwineffects/CMakeFiles/kwineffects.dir/kwineffects.cpp.o.d -o libkwineffects/CMakeFiles/kwineffects.dir/kwineffects.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects/kwineffects.cpp
+[120/974] : && /usr/bin/x86_64-pc-linux-gnu-g++ -fPIC -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always  -Wl,--no-undefined -Wl,--enable-new-dtags -Wl,-O1 -Wl,--as-needed -shared -Wl,-soname,libkwineffects.so.12 -o bin/libkwineffects.so.5.20.5 libkwineffects/CMakeFiles/kwineffects.dir/kwineffects_autogen/mocs_compilation.cpp.o libkwineffects/CMakeFiles/kwineffects.dir/anidata.cpp.o libkwineffects/CMakeFiles/kwineffects.dir/kwinanimationeffect.cpp.o libkwineffects/CMakeFiles/kwineffects.dir/kwineffectquickview.cpp.o libkwineffects/CMakeFiles/kwineffects.dir/kwineffects.cpp.o libkwineffects/CMakeFiles/kwineffects.dir/logging.cpp.o  -Wl,-rpath,/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build/bin:  /usr/lib64/libKF5Declarative.so.5.77.0  /usr/lib64/libxcb.so  bin/libkwinglutils.so.5.20.5  bin/libkwinxrenderutils.so.5.20.5  /usr/lib64/libxcb-xfixes.so  /usr/lib64/libQt5Quick.so.5.15.2  /usr/lib64/libQt5QmlModels.so.5.15.2  /usr/lib64/libQt5Qml.so.5.15.2  /usr/lib64/libKF5Package.so.5.81.0  /usr/lib64/libQt5Network.so.5.15.2  /usr/lib64/libKF5ConfigCore.so.5.81.0  /usr/lib64/libQt5DBus.so.5.15.2  /usr/lib64/libKF5CoreAddons.so.5.81.0  /usr/lib64/libKF5WindowSystem.so.5.81.0  /usr/lib64/libQt5Widgets.so.5.15.2  -lepoxy  /usr/lib64/libxcb-shape.so  /usr/lib64/libKWaylandServer.so.5.21.4  /usr/lib64/libQt5Gui.so.5.15.2  /usr/lib64/libwayland-server.so  /usr/lib64/libQt5Core.so.5.15.2  /usr/lib64/libxcb-render.so  /usr/lib64/libxcb.so && :
+[121/974] /usr/bin/cmake -E cmake_symlink_library bin/libkwineffects.so.5.20.5  bin/libkwineffects.so.12 bin/libkwineffects.so && :
+[122/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkcm_kwindecoration_EXPORTS -Ikcmkwin/kwindecoration -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration -Ikcmkwin/kwindecoration/kcm_kwindecoration_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KNewStuff3 -isystem /usr/include/KF5/KNewStuff3/KNS3 -isystem /usr/include/KF5/KNewStuff3/knscore -isystem /usr/include/KF5/KNewStuff3/kns3 -isystem /usr/include/KF5/KNewStuff3/KNSCore -isystem /usr/include/KF5/Attica -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KXmlGui -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/KF5/KAuth -isystem /usr/include/qt5/QtDBus -isystem /usr/include/KF5/KService -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/declarative-plugin/buttonsmodel.cpp.o -MF kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/declarative-plugin/buttonsmodel.cpp.o.d -o kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/declarative-plugin/buttonsmodel.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/buttonsmodel.cpp
+[123/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkcm_kwindecoration_EXPORTS -Ikcmkwin/kwindecoration -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration -Ikcmkwin/kwindecoration/kcm_kwindecoration_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KNewStuff3 -isystem /usr/include/KF5/KNewStuff3/KNS3 -isystem /usr/include/KF5/KNewStuff3/knscore -isystem /usr/include/KF5/KNewStuff3/kns3 -isystem /usr/include/KF5/KNewStuff3/KNSCore -isystem /usr/include/KF5/Attica -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KXmlGui -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/KF5/KAuth -isystem /usr/include/qt5/QtDBus -isystem /usr/include/KF5/KService -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kcm_kwindecoration_autogen/mocs_compilation.cpp.o -MF kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kcm_kwindecoration_autogen/mocs_compilation.cpp.o.d -o kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kcm_kwindecoration_autogen/mocs_compilation.cpp.o -c kcmkwin/kwindecoration/kcm_kwindecoration_autogen/mocs_compilation.cpp
+[124/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkcm_kwindecoration_EXPORTS -Ikcmkwin/kwindecoration -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration -Ikcmkwin/kwindecoration/kcm_kwindecoration_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KNewStuff3 -isystem /usr/include/KF5/KNewStuff3/KNS3 -isystem /usr/include/KF5/KNewStuff3/knscore -isystem /usr/include/KF5/KNewStuff3/kns3 -isystem /usr/include/KF5/KNewStuff3/KNSCore -isystem /usr/include/KF5/Attica -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KXmlGui -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/KF5/KAuth -isystem /usr/include/qt5/QtDBus -isystem /usr/include/KF5/KService -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/decorationmodel.cpp.o -MF kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/decorationmodel.cpp.o.d -o kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/decorationmodel.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/decorationmodel.cpp
+[125/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkcm_kwindecoration_EXPORTS -Ikcmkwin/kwindecoration -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration -Ikcmkwin/kwindecoration/kcm_kwindecoration_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KNewStuff3 -isystem /usr/include/KF5/KNewStuff3/KNS3 -isystem /usr/include/KF5/KNewStuff3/knscore -isystem /usr/include/KF5/KNewStuff3/kns3 -isystem /usr/include/KF5/KNewStuff3/KNSCore -isystem /usr/include/KF5/Attica -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KXmlGui -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/KF5/KAuth -isystem /usr/include/qt5/QtDBus -isystem /usr/include/KF5/KService -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/utils.cpp.o -MF kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/utils.cpp.o.d -o kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/utils.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/utils.cpp
+[126/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkcm_kwindecoration_EXPORTS -Ikcmkwin/kwindecoration -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration -Ikcmkwin/kwindecoration/kcm_kwindecoration_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KNewStuff3 -isystem /usr/include/KF5/KNewStuff3/KNS3 -isystem /usr/include/KF5/KNewStuff3/knscore -isystem /usr/include/KF5/KNewStuff3/kns3 -isystem /usr/include/KF5/KNewStuff3/KNSCore -isystem /usr/include/KF5/Attica -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KXmlGui -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/KF5/KAuth -isystem /usr/include/qt5/QtDBus -isystem /usr/include/KF5/KService -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kwindecorationsettings.cpp.o -MF kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kwindecorationsettings.cpp.o.d -o kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kwindecorationsettings.cpp.o -c kcmkwin/kwindecoration/kwindecorationsettings.cpp
+[127/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkdecorationprivatedeclarative_EXPORTS -Ikcmkwin/kwindecoration/declarative-plugin -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin -Ikcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o -MF kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o.d -o kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o -c kcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp
+[31mFAILED: [0mkcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o 
+/usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkdecorationprivatedeclarative_EXPORTS -Ikcmkwin/kwindecoration/declarative-plugin -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin -Ikcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o -MF kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o.d -o kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp.o -c kcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp
+In file included from [01m[Kkcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/EWIEGA46WW/moc_previewclient.cpp:10[m[K,
+                 from [01m[Kkcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/mocs_compilation.cpp:7[m[K:
+[01m[Kkcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/EWIEGA46WW/../../../../../../kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:96:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid KDecoration2::Preview::PreviewClient::requestShowWindowMenu()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   96 |     void [01;31m[KrequestShowWindowMenu[m[K() override;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kkcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/EWIEGA46WW/../../../../../../kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:96:10:[m[K [01;35m[Kwarning: [m[K  by ‘[01m[Kvoid KDecoration2::Preview::PreviewClient::requestShowWindowMenu()[m[K’ [[01;35m[K-Woverloaded-virtual[m[K]
+[128/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkcm_kwindecoration_EXPORTS -Ikcmkwin/kwindecoration -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration -Ikcmkwin/kwindecoration/kcm_kwindecoration_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KNewStuff3 -isystem /usr/include/KF5/KNewStuff3/KNS3 -isystem /usr/include/KF5/KNewStuff3/knscore -isystem /usr/include/KF5/KNewStuff3/kns3 -isystem /usr/include/KF5/KNewStuff3/KNSCore -isystem /usr/include/KF5/Attica -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KXmlGui -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/KF5/KAuth -isystem /usr/include/qt5/QtDBus -isystem /usr/include/KF5/KService -isystem /usr/include/KF5/KDeclarative -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kcm.cpp.o -MF kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kcm.cpp.o.d -o kcmkwin/kwindecoration/CMakeFiles/kcm_kwindecoration.dir/kcm.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/kcm.cpp
+[129/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkdecorationprivatedeclarative_EXPORTS -Ikcmkwin/kwindecoration/declarative-plugin -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin -Ikcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o -MF kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o.d -o kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbutton.cpp
+[31mFAILED: [0mkcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o 
+/usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkdecorationprivatedeclarative_EXPORTS -Ikcmkwin/kwindecoration/declarative-plugin -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin -Ikcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o -MF kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o.d -o kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbutton.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbutton.cpp
+In file included from [01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbutton.cpp:8[m[K:
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:96:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid KDecoration2::Preview::PreviewClient::requestShowWindowMenu()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   96 |     void [01;31m[KrequestShowWindowMenu[m[K() override;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:96:10:[m[K [01;35m[Kwarning: [m[K  by ‘[01m[Kvoid KDecoration2::Preview::PreviewClient::requestShowWindowMenu()[m[K’ [[01;35m[K-Woverloaded-virtual[m[K]
+[130/974] /usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkdecorationprivatedeclarative_EXPORTS -Ikcmkwin/kwindecoration/declarative-plugin -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin -Ikcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o -MF kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o.d -o kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp
+[31mFAILED: [0mkcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o 
+/usr/bin/x86_64-pc-linux-gnu-g++ -DKCOREADDONS_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0 -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_NO_URL_CAST_FROM_STRING -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DTRANSLATION_DOMAIN=\"kcm_kwindecoration\" -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -Dkdecorationprivatedeclarative_EXPORTS -Ikcmkwin/kwindecoration/declarative-plugin -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin -Ikcmkwin/kwindecoration/declarative-plugin/kdecorationprivatedeclarative_autogen/include -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/platformsupport -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/tabbox -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/effects -I/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/libkwineffects -I. -Ilibkwineffects -isystem /usr/include/KDecoration2 -isystem /usr/include/KF5 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtDBus -isystem /usr/include/qt5/QtQuick -isystem /usr/include/qt5/QtQmlModels -isystem /usr/include/qt5/QtQml -isystem /usr/include/qt5/QtNetwork -isystem /usr/include/KF5/KCoreAddons -isystem /usr/include/KF5/KConfigWidgets -isystem /usr/include/KF5/KCodecs -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/KF5/KConfigGui -isystem /usr/include/qt5/QtXml -isystem /usr/include/KF5/KConfigCore -isystem /usr/include/KF5/KAuth -isystem /usr/include/KF5/KI18n -isystem /usr/include/KF5/KService  -DQT_NO_DEBUG -O2 -pipe -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -fdiagnostics-color=always -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++14 -MD -MT kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o -MF kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o.d -o kcmkwin/kwindecoration/declarative-plugin/CMakeFiles/kdecorationprivatedeclarative.dir/previewbridge.cpp.o -c /var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp
+In file included from [01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp:7[m[K:
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:96:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid KDecoration2::Preview::PreviewClient::requestShowWindowMenu()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   96 |     void [01;31m[KrequestShowWindowMenu[m[K() override;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:96:10:[m[K [01;35m[Kwarning: [m[K  by ‘[01m[Kvoid KDecoration2::Preview::PreviewClient::requestShowWindowMenu()[m[K’ [[01;35m[K-Woverloaded-virtual[m[K]
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp:[m[K In member function ‘[01m[Kvirtual std::unique_ptr<KDecoration2::DecoratedClientPrivate> KDecoration2::Preview::PreviewBridge::createClient(KDecoration2::DecoratedClient*, KDecoration2::Decoration*)[m[K’:
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp:51:83:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[KKDecoration2::Preview::PreviewClient[m[K’
+   51 |     auto ptr = std::unique_ptr<PreviewClient>(new PreviewClient(client, decoration[01;31m[K)[m[K);
+      |                                                                                   [01;31m[K^[m[K
+In file included from [01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp:7[m[K:
+[01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:21:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[KKDecoration2::Preview::PreviewClient[m[K’:
+   21 | class [01;36m[KPreviewClient[m[K : public QObject, public ApplicationMenuEnabledDecoratedClientPrivate
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/KDecoration2/KDecoration2/Private/DecoratedClientPrivate:1[m[K,
+                 from [01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewclient.h:11[m[K,
+                 from [01m[K/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5/kcmkwin/kwindecoration/declarative-plugin/previewbridge.cpp:7[m[K:
+[01m[K/usr/include/KDecoration2/kdecoration2/private/decoratedclientprivate.h:76:18:[m[K [01;36m[Knote: [m[K	‘[01m[Kvirtual void KDecoration2::DecoratedClientPrivate::requestShowWindowMenu(const QRect&)[m[K’
+   76 |     virtual void [01;36m[KrequestShowWindowMenu[m[K(const QRect &rect) = 0;
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+ninja: build stopped: subcommand failed.
+ [31;01m*[0m ERROR: kde-plasma/kwin-5.20.5-r1::gentoo failed (compile phase):
+ [31;01m*[0m   ninja -v -j4 -l0 failed
+ [31;01m*[0m 
+ [31;01m*[0m Call stack:
+ [31;01m*[0m     ebuild.sh, line  125:  Called src_compile
+ [31;01m*[0m   environment, line 2708:  Called cmake_src_compile
+ [31;01m*[0m   environment, line 1141:  Called cmake_build
+ [31;01m*[0m   environment, line 1110:  Called eninja
+ [31;01m*[0m   environment, line 1752:  Called die
+ [31;01m*[0m The specific snippet of code:
+ [31;01m*[0m       "$@" || die "${nonfatal_args[@]}" "${*} failed"
+ [31;01m*[0m 
+ [31;01m*[0m If you need support, post the output of `emerge --info '=kde-plasma/kwin-5.20.5-r1::gentoo'`,
+ [31;01m*[0m the complete build log and the output of `emerge -pqv '=kde-plasma/kwin-5.20.5-r1::gentoo'`.
+ [31;01m*[0m The complete build log is located at '/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/temp/build.log'.
+ [31;01m*[0m The ebuild environment file is located at '/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/temp/environment'.
+ [31;01m*[0m Working directory: '/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5_build'
+ [31;01m*[0m S: '/var/tmp/portage/kde-plasma/kwin-5.20.5-r1/work/kwin-5.20.5'
