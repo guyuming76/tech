@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.1.3.2 (Linux)"/>
 	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="2021-05-11T12:39:45.365272425"/>
+	<meta name="changed" content="2021-05-11T13:14:30.454641078"/>
 	<meta name="Originator" content="Microsoft Word 14"/>
 	<meta name="ProgId" content="Word.Document"/>
 	<script language="JavaScript">
@@ -20,111 +20,111 @@ var _hmt = _hmt || [];
 </script>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin-left: 2cm; margin-right: 1cm; margin-top: 1cm; margin-bottom: 1cm }
-		p { margin-bottom: 0.25cm; color: #000000; line-height: 115%; background: transparent }
+		p { margin-bottom: 0.25cm; color: #000000; background: transparent }
 		a:link { color: #000080; so-language: zxx; text-decoration: underline }
 	</style>
 </head>
 <body lang="zh-CN" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p style="margin-bottom: 0cm">
 &nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">接上篇</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><a href="http://guyuming76.gitee.io/personal/gentoo/emergeAnalysis1.html"><font color="#000080"><font face="Times New Roman"><font size="5" style="font-size: 20pt"><u>http://guyuming76.gitee.io/personal/gentoo/emergeAnalysis1.html</u></font></font></font></a>&nbsp;<font face="Calibri"><font size="5" style="font-size: 20pt">Pudb</font></font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">操作指南，我这会儿遇到一个警告错误，实操一下：</font></font></p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">接上篇&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><a href="http://guyuming76.gitee.io/personal/gentoo/emergeAnalysis1.html"><font color="#000080"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><u>http://guyuming76.gitee.io/personal/gentoo/emergeAnalysis1.html</u></font></font></font></a><font color="#000000">&nbsp;</font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">Pudb</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">操作指南，我这会儿遇到一个警告错误，实操一下：</font></font></font></p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2178.png" name="Image1" align="bottom" width="1652" height="762" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2182.png" name="Image2" align="bottom" width="737" height="287" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">首先，我们注意到一个方法</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">display_problems,
-</font></font></span></font><font size="5" style="font-size: 20pt">我们在第一幅图上看到的警告消息内容就是这里显示出来的：</font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2244.png" name="Image3" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">具体说是通过</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">_show_missed_update_slot_conflicts
-</font></font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">显示的，
-事实上，如果我一开始用消息字符串 “</font></font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">WARNING:
-One or more updates/rebuilds </font></font><font size="5" style="font-size: 20pt">”</font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">在代码目录里
-</font></font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">grep,
-</font></font></span></font><font size="5" style="font-size: 20pt">应该直接就能找到这里设置断点，可惜我这次不是这么做的，我一开始参照</font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">Profiler</font></font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">的结果，在别的地方设的断点，然后一边调试，一边尝试理解代码，花了大半天，后来找到这里：</font></font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2449.png" name="Image4" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">由此，我们可以知道，警告的内容在代码里叫</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">missed
-updates, </font></font></span></font><font size="5" style="font-size: 20pt">下面这段代码是根据</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">conflicts
-</font></font></span></font><font size="5" style="font-size: 20pt">得到</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">self._dynamic_config._conflict_missed_update
-</font></font></span></font><font size="5" style="font-size: 20pt">的过程</font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2562.png" name="Image5" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">而下面的代码，是</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">conflicts
-</font></font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">的生成过程：</font></font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2592.png" name="Image6" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">通过读代码，我们可以发现，还要追查</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">self._multi_pkgs</font></font>&nbsp;</span></font><font size="5" style="font-size: 20pt">的值是如何生成的，
-用 </font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">_multi_pkgs
-</font></font></span></font><font size="5" style="font-size: 20pt">在当前文件搜索，结果找到一段详细的注释：</font></p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2675.png" name="Image7" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">据此，我们在添加一个</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">self._multi_pkgs.append
-</font></font></span></font><font size="5" style="font-size: 20pt">处的断点并重新开始调试：</font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2726.png" name="Image8" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">第一次断点停在
-</font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">sys_devel/clang
-</font></font></span></font><font size="5" style="font-size: 20pt">这个包的处理上，不是本次调试关心的，按</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">c
-</font></font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">继续，直到停在
-</font></font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">dev-libs/libgit2
-</font></font></span></font><font size="5" style="font-size: 20pt">上：</font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2803.png" name="Image9" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">但问题是，这个断点只能在第二次加</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">dev-libs/libgit2
-</font></font></span></font><font size="5" style="font-size: 20pt">包的时候停，我们重新设个条件断点，每当</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">pkg.cp
-</font></font></span></font><font size="5" style="font-size: 20pt">值为</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">dev-libs/libgit2
-</font></font></span></font><font size="5" style="font-size: 20pt">的时候都停，这样我们就可以获得两个调用栈。操作方法：先按</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">b
-</font></font></span></font><font size="5" style="font-size: 20pt">设置一个普通断点，</font>&nbsp;<font size="5" style="font-size: 20pt">再把光标移到右下角断点上，按
-</font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">e
-</font></font></span></font><font size="5" style="font-size: 20pt">获得如下弹出窗口，输入条件：</font></p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2961.png" name="Image10" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2964.png" name="Image11" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
-<p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis2967.png" name="Image12" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image1"></a><img src="emergeAnalysis2.files/emergeAnalysis2292.png" name="Image1" align="bottom" width="1652" height="762" border="0"/>
+<font color="#000000">&nbsp;</font></p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><font size="5" style="font-size: 20pt">我把这个问题提交到官方论坛上：</font><font face="Liberation Serif, serif"><span lang="en-US"><a href="https://forums.gentoo.org/viewtopic-p-8608923.html#8608923"><font color="#000080"><font face="Times New Roman"><font size="5" style="font-size: 20pt"><u>https://forums.gentoo.org/viewtopic-p-8608923.html#8608923</u></font></font></font></a>&nbsp;</span></font><font size="5" style="font-size: 20pt">，
-答复说是一个小</font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">Bug</font></font></span></font><font face="宋体"><font size="5" style="font-size: 20pt">。我这里从上面“</font></font><font size="5" style="font-size: 20pt">根据</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">conflicts
-</font></font></span></font><font size="5" style="font-size: 20pt">得到</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">self._dynamic_config._conflict_missed_update
-</font></font></span></font><font size="5" style="font-size: 20pt">的过程</font>”<font face="宋体"><font size="5" style="font-size: 20pt">往下调试，看到了一个地方
-</font></font><font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">need_enabled
-</font></font></span></font><font size="5" style="font-size: 20pt">值包含</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">ssh,
-</font></font></span></font><font size="5" style="font-size: 20pt">估计就是这个导致</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">match
-</font></font></span></font><font size="5" style="font-size: 20pt">返回</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">false</font></font></span></font><font size="5" style="font-size: 20pt">，认定为一个</font>&nbsp;<font face="Liberation Serif, serif"><span lang="en-US"><font face="Calibri"><font size="5" style="font-size: 20pt">_conflict_missed_update:</font></font></span></font></p>
+<p style="margin-bottom: 0cm"><a name="Image2"></a><img src="emergeAnalysis2.files/emergeAnalysis2412.png" name="Image2" align="bottom" width="737" height="287" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">首先，我们注意到一个方法&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">display_problems,
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">我们在第一幅图上看到的警告消息内容就是这里显示出来的：</font></font></font></p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis21296.png" name="Image13" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image3"></a><img src="emergeAnalysis2.files/emergeAnalysis2589.png" name="Image3" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">具体说是通过&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">_show_missed_update_slot_conflicts
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">显示的，
+事实上，如果我一开始用消息字符串 “</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">WARNING:
+One or more updates/rebuilds ”</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">在代码目录里
+</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">grep,
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">应该直接就能找到这里设置断点，可惜我这次不是这么做的，我一开始参照</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">Profiler</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的结果，在别的地方设的断点，然后一边调试，一边尝试理解代码，花了大半天，后来找到这里：</font></font></font></p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">最后，</font></span></font><font color="#ff0000"><span style="background: #ffff00">&nbsp;</span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">第一张图里面指向
-</font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">[ssh]
-</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">的那三个箭头</font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">^^^</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">，</font></span></font><font color="#ff0000"><span style="background: #ffff00">&nbsp;</span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">经常会因为换行而隔行指向要</font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">Highlight
-</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">的字符，用
-</font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">Ctrl+</span></font></font></font><font color="#ff0000"><span style="background: #ffff00">’</span></font><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">-’</span></font></font></font><font color="#ff0000"><span style="background: #ffff00">&nbsp;</span></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">缩小字体，可以消灭换行，就会让箭头恰巧显示在
-</font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">ssh
-</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">下方。我之前经常认为发生</font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">conflict
-</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">时</font></span></font><font color="#ff0000"><span style="background: #ffff00">&nbsp;</span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="Calibri"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">^
-</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font size="5" style="font-size: 20pt">指向的地方是错误的，以至后来就忽视了这个指示。</font></span></font></p>
+<p style="margin-bottom: 0cm"><a name="Image4"></a><img src="emergeAnalysis2.files/emergeAnalysis2909.png" name="Image4" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
-<p style="margin-bottom: 0cm"><img src="emergeAnalysis2.files/emergeAnalysis21444.png" name="Image14" align="bottom" width="1867" height="1050" border="0"/>
-&nbsp;</p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">由此，我们可以知道，警告的内容在代码里叫&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">missed
+updates, </font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">下面这段代码是根据&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">conflicts
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">得到&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">self._dynamic_config._conflict_missed_update
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的过程</font></font></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image5"></a><img src="emergeAnalysis2.files/emergeAnalysis21138.png" name="Image5" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">而下面的代码，是&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">conflicts
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的生成过程：</font></font></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image6"></a><img src="emergeAnalysis2.files/emergeAnalysis21284.png" name="Image6" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">通过读代码，我们可以发现，还要追查&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">self._multi_pkgs&nbsp;</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的值是如何生成的，
+用 </font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">_multi_pkgs
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">在当前文件搜索，结果找到一段详细的注释：</font></font></font></p>
+<p style="margin-bottom: 0cm"><a name="Image7"></a><img src="emergeAnalysis2.files/emergeAnalysis21482.png" name="Image7" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">据此，我们在添加一个&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">self._multi_pkgs.append
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">处的断点并重新开始调试：</font></font></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image8"></a><img src="emergeAnalysis2.files/emergeAnalysis21648.png" name="Image8" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">第一次断点停在
+</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">sys_devel/clang
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">这个包的处理上，不是本次调试关心的，按&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">c
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">继续，直到停在
+</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">dev-libs/libgit2
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">上：</font></font></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image9"></a><img src="emergeAnalysis2.files/emergeAnalysis21840.png" name="Image9" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">但问题是，这个断点只能在第二次加&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">dev-libs/libgit2
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">包的时候停，我们重新设个条件断点，每当&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">pkg.cp
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">值为&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">dev-libs/libgit2
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的时候都停，这样我们就可以获得两个调用栈。操作方法：先按&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">b
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">设置一个普通断点，&nbsp;再把光标移到右下角断点上，按
+</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">e
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">获得如下弹出窗口，输入条件：</font></font></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image10"></a><img src="emergeAnalysis2.files/emergeAnalysis22114.png" name="Image10" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image11"></a><img src="emergeAnalysis2.files/emergeAnalysis22232.png" name="Image11" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image12"></a><img src="emergeAnalysis2.files/emergeAnalysis22350.png" name="Image12" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">我把这个问题提交到官方论坛上：</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><a href="#8608923"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><u>https://forums.gentoo.org/viewtopic-p-8608923.html#8608923</u></font></font></font></a><font color="#000000">&nbsp;</font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">，
+答复说是一个小</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">Bug</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">。我这里从上面“根据&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">conflicts
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">得到&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">self._dynamic_config._conflict_missed_update
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的过程”往下调试，看到了一个地方
+</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">need_enabled
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">值包含&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">ssh,
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">估计就是这个导致&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">match
+</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">返回&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">false</font></font></font></span></font><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">，认定为一个&nbsp;</font></font></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#000000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">_conflict_missed_update:</font></font></font></span></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image13"></a><img src="emergeAnalysis2.files/emergeAnalysis22802.png" name="Image13" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">最后，&nbsp;第一张图里面指向
+</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">[ssh]
+</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的那三个箭头</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">^^^</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">，&nbsp;经常会因为换行而隔行指向要</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">Highlight
+</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">的字符，用
+</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">Ctrl+’-’&nbsp;</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">缩小字体，可以消灭换行，就会让箭头恰巧显示在
+</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">ssh
+</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">下方。我之前经常认为发生</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">conflict
+</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">时&nbsp;</font></font></span></font><font face="Liberation Serif, serif"><span lang="en-US"><font color="#ff0000"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt"><span style="background: #ffff00">^
+</span></font></font></font></span></font><font color="#ff0000"><span style="background: #ffff00"><font face="WenQuanYi Zen Hei Mono"><font size="5" style="font-size: 20pt">指向的地方是错误的，以至后来就忽视了这个指示。</font></font></span></font></p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<p style="margin-bottom: 0cm"><a name="Image14"></a><img src="emergeAnalysis2.files/emergeAnalysis23067.png" name="Image14" align="bottom" width="1867" height="1050" border="0"/>
+<font color="#000000">&nbsp;</font></p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
 <p style="margin-bottom: 0cm">&nbsp;</p>
 </body>
